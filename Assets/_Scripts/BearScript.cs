@@ -19,6 +19,7 @@ public class BearScript : MonoBehaviour
 {
     public GameObject Lostscene;
     public GameObject Cars;
+    public GameObject Police;
 
    // [SerializeField]
    // Rigidbody2D rb;
@@ -58,7 +59,7 @@ public class BearScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.tag == "TractorPrefab")
+        if(collider.tag == "TractorPrefab" || collider.tag == "PolicePrefab")
         {
             Debug.Log("You lost");
             ScoreScript.CurrentScore = 0;
@@ -67,6 +68,7 @@ public class BearScript : MonoBehaviour
             Lostscene.SetActive(true);
             Destroy(gameObject);
             Destroy(Cars);
+            Destroy(Police);
         }
     }
 }

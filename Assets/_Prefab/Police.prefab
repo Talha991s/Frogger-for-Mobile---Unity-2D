@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4946125437356800070}
   m_Layer: 0
   m_Name: Police
-  m_TagString: Untagged
+  m_TagString: PolicePrefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,5 +145,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2: {fileID: 4946125437356800066}
-  boundary: 10
-  speed: 1
+  speed: 5
