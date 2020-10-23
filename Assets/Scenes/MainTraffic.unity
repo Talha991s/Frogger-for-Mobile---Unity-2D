@@ -2820,7 +2820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PolicePrefab: {fileID: 4946125437356800065, guid: cd36e6216a0d6ee49ab43cb1f8ec9a48, type: 3}
-  spawnDelay: 0.3
+  spawnDelay: 0.5
   Spawpoints:
   - {fileID: 2082164075}
 --- !u!1 &1860354032
@@ -3029,6 +3029,11 @@ MonoBehaviour:
   Cars: {fileID: 217781041}
   Police: {fileID: 1683282003}
   boat: {fileID: 966286449}
+  maxSpeed: 1
+  verticalSpeed: 1
+  HorizontalSpeed: 1
+  HorizontalTValue: 0.01
+  VerticalTValue: 0.01
 --- !u!50 &2002873115
 Rigidbody2D:
   serializedVersion: 4
