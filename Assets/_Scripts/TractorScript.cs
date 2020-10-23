@@ -18,6 +18,7 @@ public class TractorScript : MonoBehaviour
 {
     
     public Rigidbody2D rb;
+   // public float boundary;
 
     [SerializeField]
     float speed = 1.0f;
@@ -36,4 +37,5 @@ public class TractorScript : MonoBehaviour
         Vector2 forward = new Vector2(transform.right.x, transform.right.y);
         rb.MovePosition(rb.position + forward * Time.fixedDeltaTime* speed);
     }
+
 }

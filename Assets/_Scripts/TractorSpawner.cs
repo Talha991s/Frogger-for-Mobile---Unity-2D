@@ -14,7 +14,7 @@ using UnityEngine;
 
 public class TractorSpawner : MonoBehaviour
 {
-    
+
     public GameObject TractorPrefab;
     
     public float spawnDelay =0.3f;
@@ -31,10 +31,6 @@ public class TractorSpawner : MonoBehaviour
             SpawnTractor();
             nexttimeTospawn = Time.time + (spawnDelay * 2); // determine when to spawn the next tractor
 
-          //if(nexttimeTospawn >= Time.time)
-          //  {
-          //      Destroy(TractorPrefab);
-          //  }
         }
     }
         
@@ -46,6 +42,7 @@ public class TractorSpawner : MonoBehaviour
         Transform Spawpoint = Spawpoints[RandomIndex];
         
         Instantiate(TractorPrefab, Spawpoint.position, Spawpoint.rotation);
+
     }
    
 
