@@ -6,8 +6,6 @@
  Description: This file determine the movement of the Police car in the scene, things such as 
               the speed, direction.
  Revision History:
- 28/09/2020
- 29/09/2020
  15/10/2020
  22/10/2020
  */

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TractorPrefab
   - PolicePrefab
+  - BoatPrefab
   layers:
   - Default
   - TransparentFX
