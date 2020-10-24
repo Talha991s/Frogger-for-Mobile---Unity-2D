@@ -17,11 +17,12 @@ using UnityEngine.UI;
 
 public class BearScript : MonoBehaviour
 {
-    public GameObject Lostscene;
-    public GameObject Cars;
-    public GameObject Police;
-    public GameObject boat;
+    [SerializeField] private Transform Player;
+    [SerializeField] private Transform respawnpoint;
 
+    public GameObject Lostscene;
+
+    
     public float maxSpeed;
 
     public float verticalSpeed;
@@ -36,18 +37,16 @@ public class BearScript : MonoBehaviour
         //setting the touch 
         m_touchesEnded = new Vector3();
         m_rigidBody = GetComponent<Rigidbody2D>();
+        //life thing
     }
-
-    // [SerializeField]
-    // Rigidbody2D rb;
-    // public static int life = 0;
-    // public GameObject Lifes;
+        
 
     // Update is called once per frame
     void Update()
     {
         _Move();
         // this move the character when the screen is tap
+       
 
     }
 
@@ -105,14 +104,18 @@ public class BearScript : MonoBehaviour
         {
             Debug.Log("You lost");
             ScoreScript.CurrentScore = 0;
-          // SceneManager.LoadScene(SceneManager.GetActiveScene().name);     //This line reset the scene and set the player to starting point.
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);     //This line reset the scene and set the player to starting point.
             //Lifes.gameObject(DestroyImmediate,life);
-           Lostscene.SetActive(true);
-            Destroy(gameObject);
-            Destroy(Cars);
-            Destroy(Police);
-            Destroy(boat);
+            //player.SetActive(true);
+            Lifecontroller.Life -= 1;
+            //Destroy(gameObject);
+            //Destroy(Cars);
+            //Destroy(Police);
+            //Destroy(boat);
+            //AudioClip();
+            Player.transform.position = respawnpoint.transform.position;
         }
+       // player.SetActive(true);
     }
 }
 
