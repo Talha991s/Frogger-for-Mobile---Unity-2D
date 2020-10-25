@@ -24,9 +24,11 @@ public class BearScript : MonoBehaviour
 
     public GameObject Lostscene;
 
-    
-    //public float maxSpeed;
 
+    //public float maxSpeed;
+    public static int CurrentScore = 0;
+    public Text ScoreText;
+   
     //public float verticalSpeed;
     //public float HorizontalSpeed;
     //public float HorizontalTValue;
@@ -39,14 +41,16 @@ public class BearScript : MonoBehaviour
         //setting the touch 
         m_touchesEnded = new Vector3();
         m_rigidBody = GetComponent<Rigidbody2D>();
-        //life thing
+        ScoreText.text = CurrentScore.ToString();
+    
+    //life thing
     }
         
 
     // Update is called once per frame
     void Update()
     {
-        // _Move();
+        //_Move();
         // this move the character when the screen is tap
         // this move the character when the screen is tap
 
@@ -65,15 +69,15 @@ public class BearScript : MonoBehaviour
     //    float direction = 0.0f;
 
     //    //touch input support
-    //    foreach( var touch in Input.touches)
+    //    foreach (var touch in Input.touches)
     //    {
     //        var worldTouch = Camera.main.ScreenToWorldPoint(touch.position);
-    //        if(worldTouch.y > transform.position.y || worldTouch.x > transform.position.x)
+    //        if (worldTouch.y > transform.position.y || worldTouch.x > transform.position.x)
     //        {
     //            direction = 1.0f;
     //        }
 
-    //        if(worldTouch.y < transform.position.y || worldTouch.x < transform.position.x)
+    //        if (worldTouch.y < transform.position.y || worldTouch.x < transform.position.x)
     //        {
     //            direction = -1.0f;
     //        }
@@ -96,7 +100,7 @@ public class BearScript : MonoBehaviour
     //    if (m_touchesEnded.y != 0.0f)
     //    {
     //        // move on y axis depending of the value of unit per touch.
-    //        transform.position = new Vector2(Mathf.Lerp(transform.position.x,m_touchesEnded.x,HorizontalTValue), Mathf.Lerp(transform.position.y, m_touchesEnded.y, VerticalTValue));
+    //        transform.position = new Vector2(Mathf.Lerp(transform.position.x, m_touchesEnded.x, HorizontalTValue), Mathf.Lerp(transform.position.y, m_touchesEnded.y, VerticalTValue));
     //    }
     //    else
     //    {
@@ -109,11 +113,18 @@ public class BearScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-     
+        if(collider.tag == "GoalPrefab")
+        {
+            CurrentScore += 50;
+            //Player.transform.position = respawnpoint.transform.position;
+            Debug.Log("Score " + CurrentScore);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
         if(collider.tag == "TractorPrefab" || collider.tag == "PolicePrefab" || collider.tag == "BoatPrefab")
         {
             Debug.Log("You lost");
-            ScoreScript.CurrentScore =0;
+            CurrentScore =0;
 
             //SceneManager.LoadScene(SceneManager.GetActiveScene().name);     //This line reset the scene and set the player to starting point.
             //Lifes.gameObject(DestroyImmediate,life);
@@ -126,6 +137,7 @@ public class BearScript : MonoBehaviour
             //AudioClip();
             Player.transform.position = respawnpoint.transform.position;
         }
+           
        // player.SetActive(true);
     }
 }

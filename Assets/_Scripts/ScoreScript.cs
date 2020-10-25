@@ -12,17 +12,17 @@
  23/10/2020
  */
 
-using UnityEngine;
-using UnityEngine.UI;
+//using UnityEngine;
+//using UnityEngine.UI;
 
-public class ScoreScript : MonoBehaviour
-{
-    public static int CurrentScore = 0;  // this make the score to remain static even when you leave the game
+//public class ScoreScript : MonoBehaviour
+//{
+//    public static int CurrentScore = 0;  // this make the score to remain static even when you leave the game
 
-    public Text ScoreText;
+//    public Text ScoreText;
 
-    void Start()
-    {
-        ScoreText.text = CurrentScore.ToString();
-    }
-}
+//    void Start()
+//    {
+//        ScoreText.text = CurrentScore.ToString();
+//    }
+//}

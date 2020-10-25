@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 2feee1ff71a635f4c983e34aca9c3c70
-  - enabled: 1
-    path: Assets/Scenes/MainTraffic.unity
+  - enabled: 0
+    path: Assets/Scenes/SecondTraffic.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MainTraffic 1.unity
+    guid: 626cc2c6b3f310e4abb6ff41cbfd25e1
   m_configObjects: {}
