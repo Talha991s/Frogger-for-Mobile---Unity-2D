@@ -1,4 +1,15 @@
-﻿using System.Collections;
+﻿/*
+Filename: PolicePool.cs
+Author: Salick Talhah
+Student Number: 101214166
+Date last modified: 15/10/2020
+Description: This file determine the spawning locations of the police by using an array and the time, delay to spawn a new object.
+Revision History:
+15/10/2020
+22/10/2020
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -39,6 +50,7 @@ public class Lifecontroller : MonoBehaviour
                 Life2.gameObject.SetActive(true);
                 life3.gameObject.SetActive(true);
                 Lostscene.SetActive(false);
+                //ScoreScript.CurrentScore += 100;
                 // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 break;
             case 2:

@@ -29,7 +29,7 @@ public class BoatManager : MonoBehaviour
         if (nexttospawn <= Time.time)
         {
             SpawnBoat();
-            nexttospawn = Time.time + (spawndelay * 5);
+            nexttospawn = Time.time + (spawndelay * 4);
         }
     }
 

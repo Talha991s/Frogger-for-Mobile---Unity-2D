@@ -8,6 +8,7 @@
  Revision History:
  15/10/2020
  22/10/2020
+ 23/10/2020
  */
 
 using System.Collections;
@@ -21,8 +22,8 @@ public class BoatScript : MonoBehaviour
     [SerializeField]
     float speed = 1.0f;
 
-    float minspeed = 0.5f;
-    float maxspeed = 2.0f;
+    float minspeed = 0.7f;
+    float maxspeed = 1.7f;
     // Start is called before the first frame update
     void Start()
     {

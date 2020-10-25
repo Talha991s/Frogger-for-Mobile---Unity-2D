@@ -23,8 +23,8 @@ public class PoliceCar : MonoBehaviour
     [SerializeField]
     float speed = 1.0f;
 
-     float minspeed = 3.0f;
-     float maxspeed = 5.0f;
+     float minspeed = 1.5f;
+     float maxspeed = 3.0f;
 
     void Start()
     {

@@ -6,6 +6,8 @@ Date last modified: 15/10/2020
 Description: This file determine the spawning locations of the police by using an array and the time, delay to spawn a new object.
 Revision History:
 15/10/2020
+20/10/2020
+22/10/2020
 */
 
 using System.Collections;
@@ -24,7 +26,7 @@ public class PPool : MonoBehaviour
         if (nextTimeSpawn <= Time.time)
         {
             SpawnPolice();
-            nextTimeSpawn = Time.time + (spawnDelay * 2);
+            nextTimeSpawn = Time.time + (spawnDelay * 3.5f);
         }
     }
 

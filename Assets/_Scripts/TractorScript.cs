@@ -23,8 +23,8 @@ public class TractorScript : MonoBehaviour
     [SerializeField]
     float speed = 1.0f;
 
-     float minspeed = 3.0f;
-     float maxspeed = 5.0f;
+     float minspeed = 2.5f;
+     float maxspeed = 4.0f;
 
     void Start()
     {

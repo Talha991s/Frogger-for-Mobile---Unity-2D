@@ -29,7 +29,7 @@ public class TractorSpawner : MonoBehaviour
         if (nexttimeTospawn <= Time.time)
         {
             SpawnTractor();
-            nexttimeTospawn = Time.time + (spawnDelay * 2); // determine when to spawn the next tractor
+            nexttimeTospawn = Time.time + (spawnDelay * 2.5f); // determine when to spawn the next tractor
 
         }
     }
